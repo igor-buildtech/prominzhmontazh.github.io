@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fc;
+    color: #1a2a3a;
+    line-height: 1.6;
+}
+
+/* ========== ШАПКА (белая, фиксированная) ========== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    z-index: 1000;
+    padding: 0.8rem 2rem;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Логотип и название */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1a4a7a;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #1a4a7a, #0a2b4e);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo span {
+    color: #1a4a7a;
+}
+
+/* Навигация */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: transparent;
+    color: #1a4a7a;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: #e8f0fe;
+    color: #0a2b4e;
+}
+
+/* Телефон в шапке */
+.phone-link {
+    background: #1a4a7a;
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.phone-link:hover {
+    background: #0a2b4e;
+    transform: scale(1.02);
+}
+
+/* Выпадающий список */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: transparent;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 320px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 1001;
+    border-radius: 12px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    margin-top: 0;
+    padding-top: 8px;
+}
+
+.dropdown-content a {
+    color: #1a2a3a;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 1px solid #eef2f7;
+    font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+    background: #e8f0fe;
+    color: #1a4a7a;
+    padding-left: 24px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ========== ОСНОВНОЙ КОНТЕНТ (отступ под шапку) ========== */
+.main-content {
+    margin-top: 85px;
+}
+
+/* ========== ГЕРО-БЛОК (синий фон, картинка справа) ========== */
+.hero {
+    background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border-left: none;
+    padding-left: 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0.8;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    display: block;
+    text-align: center;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ========== СПИСОК МОНТАЖНОГО ПРОЕКТА ========== */
+.montajnoe-proekt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.montajnoe-proekt-list li {
+    background: rgba(255,255,255,0.85);
+    padding: 0.8rem 1.2rem;
+    border-radius: 40px;
+    color: #1a4a7a;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.8rem;
+}
+
+.montajnoe-proekt-list li:before {
+    content: "✓";
+    color: #7bc5f9;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* ========== БЛОК УСЛУГ (карточки с фоновыми картинками) ========== */
+.services-section {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #0a2b4e;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ===== ТРИ КОЛОНКИ ===== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+}
+
+/* ===== КАРТОЧКИ С ФОНОВЫМИ КАРТИНКАМИ ===== */
+.service-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    min-height: 280px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Затемнение снизу */
+.service-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.8rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(10, 43, 78, 0.92) 0%, rgba(10, 43, 78, 0.3) 70%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 280px;
+}
+
+.service-card-overlay h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    line-height: 1.3;
+}
+
+.service-card-overlay .service-link {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: #ff8c00;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.3s, transform 0.3s;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+.service-card-overlay .service-link:hover {
+    background: #e07a00;
+    transform: scale(1.05);
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* Планшеты: 2 колонки */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Телефоны: 1 колонка */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .service-card {
+        min-height: 220px;
+    }
+    
+    .service-card-overlay {
+        min-height: 220px;
+        padding: 1.2rem 1rem;
+    }
+    
+    .service-card-overlay h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        min-height: 180px;
+    }
+    
+    .service-card-overlay {
+        min-height: 180px;
+        padding: 1rem;
+    }
+    
+    .service-card-overlay h3 {
+        font-size: 1rem;
+    }
+    
+    .service-card-overlay .service-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+}
+/* ========== ФУТЕР ========== */
+.footer {
+    background: #0a2b4e;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.8rem 1rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+    }
+    
+    .main-content {
+        margin-top: 130px;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+    
+    .montajnoe-proekt-list li {
+        border-radius: 12px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-btn, .phone-link {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .main-content {
+        margin-top: 200px;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.3rem;
+    }
+}
