@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монтаж систем пожаротушения в Москве | Водяное, газовое, порошковое | ПромИнжСтрой</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* ===== Дополнительные стили для страницы пожаротушения ===== */
+        
+        .fire-hero {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .fire-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .fire-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .anchor-nav {
+            background: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-bottom: 1px solid #e8f0fe;
+        }
+
+        .anchor-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .anchor-link {
+            background: #f0f6fe;
+            color: #1a4a7a;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .anchor-link:hover {
+            background: #1a7ab5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .fire-section {
+            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .fire-section:nth-child(even) {
+            background: #f9fbfe;
+        }
+
+        .fire-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .fire-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .fire-text h2 {
+            color: #0a2b4e;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .fire-text h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a7ab5;
+        }
+
+        .fire-text p {
+            color: #4a6a8a;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 1.2rem 0;
+        }
+
+        .fire-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .fire-features li {
+            padding: 0.5rem 0;
+            color: #1a2a3a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fire-features li:before {
+            content: "✓";
+            color: #1a7ab5;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a4a7a;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .fire-image {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .fire-image img {
+            width: 100%;
+            max-width: 500px;
+            height: 350px; /* Фиксированная высота */
+            object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .fire-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .price-table-section {
+            background: #f0f6fe;
+            padding: 3rem 2rem;
+        }
+
+        .price-table-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .price-table-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .price-table {
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-table th {
+            background: #1a4a7a;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .price-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eef2f7;
+            color: #1a2a3a;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tr:hover {
+            background: #f9fbfe;
+        }
+
+        .price-note {
+            text-align: center;
+            color: #4a6a8a;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .advantages {
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .advantages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantages-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9fbfe;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card h3 {
+            color: #0a2b4e;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-card p {
+            color: #4a6a8a;
+            font-size: 0.9rem;
+        }
+
+        .callback {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .callback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .callback-container h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .callback-container p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .callback-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .callback-form input {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            width: 250px;
+            outline: none;
+        }
+
+        .callback-form button {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .callback-form button:hover {
+            background: #e07a00;
+        }
+
+        @media (max-width: 768px) {
+            .fire-hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .anchor-nav {
+                top: 130px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .anchor-link {
+                white-space: nowrap;
+            }
+            
+            .fire-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .fire-text h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .fire-text h2 {
+                display: block;
+                text-align: center;
+            }
+            
+            .fire-features li {
+                justify-content: center;
+            }
+            
+            .callback-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .callback-form input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .price-table {
+                font-size: 0.85rem;
+            }
+            
+            .price-table th, .price-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">ПИС</div>
+                <span>ПромИнжСтрой</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-btn">Главная</a>
+                <div class="dropdown">
+                    <button class="nav-btn">Услуги ▼</button>
+                    <div class="dropdown-content">
+                        <a href="ventilation.html">Монтаж систем вентиляции</a>
+                        <a href="conditioning.html">Монтаж систем кондиционирования и холодоснабжения</a>
+                        <a href="heating.html">Монтаж систем отопления и теплоснабжения</a>
+                        <a href="water-supply.html">Монтаж водоснабжения, водоотведения и канализации</a>
+                        <a href="fire-suppression.html">Монтаж систем пожаротушения</a>
+                        <a href="pipelines.html">Монтаж и сварочные работы технологических трубопроводов</a>
+                        <a href="cable-systems.html">Монтаж кабеленесущих систем</a>
+                        <a href="installation-design.html">Монтажное проектирвоание</a>
+                        <a href="production-section.html">Заготовительное производство</a>
+                    </div>
+                </div>
+                <a href="../index.html#contacts" class="nav-btn">Контакты</a>
+                <a href="../index.html#portfolio" class="nav-btn">Портфолио</a>
+                <a href="tel:+79158870574" class="nav-btn phone-link">📞 8-915-887-05-74</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- ===== ГЕРОЙ-БЛОК ===== -->
+        <div class="fire-hero">
+            <h1>Монтаж систем пожаротушения в Москве</h1>
+            <p>Профессиональный монтаж водяных, газовых, порошковых и автоматических систем пожаротушения. Лицензия МЧС.</p>
+        </div>
+
+        <!-- ===== ЯКОРНАЯ НАВИГАЦИЯ ===== -->
+        <div class="anchor-nav">
+            <div class="anchor-nav-container">
+                <a href="#vodyanoe" class="anchor-link">💧 Водяное пожаротушение</a>
+                <a href="#avtomaticheskoe" class="anchor-link">🤖 Автоматическое пожаротушение</a>
+                <a href="#poroshkovoe" class="anchor-link">🧯 Порошковое пожаротушение</a>
+                <a href="#gazovoe" class="anchor-link">🧪 Газовое пожаротушение</a>
+                <a href="#oborudovanie" class="anchor-link">⚙️ Оборудование и трубопроводы</a>
+                <a href="#modulnoe" class="anchor-link">📦 Модульное пожаротушение</a>
+                <a href="#ceny" class="anchor-link">💰 Стоимость работ</a>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 1: ВОДЯНОЕ ПОЖАРОТУШЕНИЕ ===== -->
+        <div id="vodyanoe" class="fire-section">
+            <div class="fire-container">
+                <div class="fire-text">
+                    <h2>Монтаж систем водяного пожаротушения</h2>
+                    <p>Водяное пожаротушение — наиболее распространенный и надежный способ борьбы с пожарами. Монтаж спринклерных и дренчерных систем для жилых, коммерческих и промышленных объектов.</p>
+                    <ul class="fire-features">
+                        <li>Монтаж спринклерных и дренчерных систем</li>
+                        <li>Установка пожарных насосных станций</li>
+                        <li>Прокладка трубопроводов и распределительной сети</li>
+                        <li>Монтаж узлов управления и автоматики</li>
+                        <li>Гидравлические испытания системы</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 25 000 ₽</div>
+                </div>
+                <div class="fire-image">
+                    <img src="../images/pozar_01.jpg" alt="Водяное пожаротушение" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Водяное+пожаротушение'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 2: АВТОМАТИЧЕСКОЕ ПОЖАРОТУШЕНИЕ ===== -->
+        <div id="avtomaticheskoe" class="fire-section">
+            <div class="fire-container">
+                <div class="fire-text">
+                    <h2>Монтаж автоматических систем пожаротушения</h2>
+                    <p>Автоматические установки пожаротушения (АУПТ) обеспечивают обнаружение и тушение пожара без участия человека. Монтаж систем с различными типами огнетушащих веществ.</p>
+                    <ul class="fire-features">
+                        <li>Проектирование и монтаж АУПТ</li>
+                        <li>Установка пожарных извещателей и датчиков</li>
+                        <li>Монтаж системы оповещения и управления</li>
+                        <li>Интеграция с системами безопасности</li>
+                        <li>Пусконаладочные работы</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 30 000 ₽</div>
+                </div>
+                <div class="fire-image">
+                    <img src="../images/IMG_20260617_153406.webp" alt="Автоматическое пожаротушение" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Автоматическое+пожаротушение'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 3: ПОРОШКОВОЕ ПОЖАРОТУШЕНИЕ ===== -->
+        <div id="poroshkovoe" class="fire-section">
+            <div class="fire-container">
+                <div class="fire-text">
+                    <h2>Монтаж систем порошкового пожаротушения</h2>
+                    <p>Порошковые системы пожаротушения эффективны для тушения пожаров классов A, B, C и электроустановок. Идеальное решение для производственных и складских помещений.</p>
+                    <ul class="fire-features">
+                        <li>Монтаж автоматических и ручных порошковых систем</li>
+                        <li>Установка модулей порошкового пожаротушения</li>
+                        <li>Прокладка трубопроводов и распределительной сети</li>
+                        <li>Монтаж системы запуска и управления</li>
+                        <li>Обслуживание и перезарядка модулей</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 22 000 ₽</div>
+                </div>
+                <div class="fire-image">
+                    <img src="../images/pozar_03.jpg" alt="Порошковое пожаротушение" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Порошковое+пожаротушение'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 4: ГАЗОВОЕ ПОЖАРОТУШЕНИЕ ===== -->
+        <div id="gazovoe" class="fire-section">
+            <div class="fire-container">
+                <div class="fire-text">
+                    <h2>Монтаж систем газового пожаротушения</h2>
+                    <p>Газовое пожаротушение — эффективный способ защиты дорогостоящего оборудования, серверных, архивов и музеев. Тушение без повреждения имущества.</p>
+                    <ul class="fire-features">
+                        <li>Монтаж систем с хладоном, инертными газами, Novec 1230</li>
+                        <li>Установка газовых модулей и баллонов</li>
+                        <li>Прокладка газораспределительной сети</li>
+                        <li>Монтаж системы обнаружения и запуска</li>
+                        <li>Расчет количества огнетушащего вещества</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 35 000 ₽</div>
+                </div>
+                <div class="fire-image">
+                    <img src="../images/pozar_04.jpg" alt="Газовое пожаротушение" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Газовое+пожаротушение'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 5: МОДУЛЬНОЕ ПОЖАРОТУШЕНИЕ ===== -->
+        <div id="modulnoe" class="fire-section">
+            <div class="fire-container">
+                <div class="fire-text">
+                    <h2>Монтаж модульного пожаротушения</h2>
+                    <p>Модульные системы пожаротушения — автономные, компактные решения для защиты отдельных помещений и оборудования. Быстрый монтаж и простая эксплуатация.</p>
+                    <ul class="fire-features">
+                        <li>Монтаж модулей газового и порошкового пожаротушения</li>
+                        <li>Установка модулей с тепловым и электрическим запуском</li>
+                        <li>Монтаж модулей для серверных и электрощитовых</li>
+                        <li>Обслуживание и перезарядка модулей</li>
+                        <li>Сертифицированное оборудование</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 18 000 ₽</div>
+                </div>
+                <div class="fire-image">
+                    <img src="../images/pozar_06.jpg" alt="Модульное пожаротушение" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Модульное+пожаротушение'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 6: ОБОРУДОВАНИЕ И ТРУБОПРОВОДЫ ===== -->
+        <div id="oborudovanie" class="fire-section">
+            <div class="fire-container">
+                <div class="fire-text">
+                    <h2>Монтаж оборудования и трубопроводов систем пожаротушения</h2>
+                    <p>Установка насосных станций, распределительных узлов, запорной арматуры и трубопроводов для систем пожаротушения. Комплексный подход к оснащению объектов.</p>
+                    <ul class="fire-features">
+                        <li>Монтаж пожарных насосных станций</li>
+                        <li>Установка запорной и регулирующей арматуры</li>
+                        <li>Прокладка трубопроводов из стали, меди, полимеров</li>
+                        <li>Монтаж узлов управления и распределения</li>
+                        <li>Обвязка оборудования и пусконаладка</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 20 000 ₽</div>
+                </div>
+                <div class="fire-image">
+                    <img src="../images/pozar_07.jpg" alt="Оборудование и трубопроводы" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Оборудование+и+трубопроводы'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 7: ТАБЛИЦА ЦЕН ===== -->
+        <div id="ceny" class="price-table-section">
+            <div class="price-table-container">
+                <h2>💰 Стоимость монтажа систем пожаротушения</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr><th>Вид работ</th><th>Единица измерения</th><th>Цена, руб.</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Монтаж спринклерного оросителя</td><td>шт.</td><td>от 1 200</td></tr>
+                        <tr><td>Монтаж дренчерного оросителя</td><td>шт.</td><td>от 1 500</td></tr>
+                        <tr><td>Монтаж пожарного насоса</td><td>шт.</td><td>от 8 000</td></tr>
+                        <tr><td>Монтаж узла управления (УУП)</td><td>шт.</td><td>от 6 500</td></tr>
+                        <tr><td>Монтаж модуля газового пожаротушения</td><td>шт.</td><td>от 5 000</td></tr>
+                        <tr><td>Монтаж модуля порошкового пожаротушения</td><td>шт.</td><td>от 4 000</td></tr>
+                        <tr><td>Монтаж трубопровода (сталь)</td><td>м.п.</td><td>от 600</td></tr>
+                        <tr><td>Монтаж трубопровода (медь)</td><td>м.п.</td><td>от 800</td></tr>
+                        <tr><td>Монтаж пожарного извещателя</td><td>шт.</td><td>от 800</td></tr>
+                        <tr><td>Монтаж системы оповещения и управления</td><td>компл.</td><td>от 10 000</td></tr>
+                        <tr><td>Пусконаладочные работы</td><td>компл.</td><td>от 8 000</td></tr>
+                        <tr><td>Обслуживание и перезарядка модулей</td><td>шт.</td><td>от 3 000</td></tr>
+                    </tbody>
+                </table>
+                <div class="price-note">* Цены указаны без учета стоимости оборудования и материалов. Точную стоимость рассчитаем после выезда на объект.</div>
+            </div>
+        </div>
+
+        <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+        <div class="advantages">
+            <div class="advantages-container">
+                <h2>Почему выбирают нас?</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📜</div>
+                        <h3>Лицензия МЧС</h3>
+                        <p>Работаем на законных основаниях, все допуски и разрешения</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🏗️</div>
+                        <h3>Любые типы систем</h3>
+                        <p>Водяные, газовые, порошковые, модульные, автоматические</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">👷</div>
+                        <h3>Опытные инженеры</h3>
+                        <p>Штатные специалисты с профильным образованием</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🔧</div>
+                        <h3>Гарантия 3 года</h3>
+                        <p>На все виды монтажных и пусконаладочных работ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ФОРМА ЗАЯВКИ ===== -->
+        <div class="callback">
+            <div class="callback-container">
+                <h2>Нужна консультация по пожаротушению?</h2>
+                <p>Оставьте заявку — мы рассчитаем стоимость монтажа за 1 час</p>
+                <form class="callback-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===== ФУТЕР ===== -->
+    <footer class="footer" id="contacts">
+        <p>📞 Телефон: <a href="tel:+79158870574" style="color: white; text-decoration: none;">8-915-887-05-74</a></p>
+        <p>📧 Email: info@promingstroy.ru</p>
+        <p>📍 Адрес: г. Москва, ул. Инженерная, д. 10</p>
+        <p>© 2025 ПромИнжСтрой — Монтаж систем пожаротушения в Москве</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

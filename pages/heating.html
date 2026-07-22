@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монтаж отопления в Москве | Отопление, теплоснабжение | ПромИнжСтрой</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Дополнительные стили для страницы вентиляции */
+        .ventilation-hero {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .ventilation-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .ventilation-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Якорная навигация */
+        .anchor-nav {
+            background: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #e8f0fe;
+        }
+
+        .anchor-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .anchor-link {
+            background: #f0f6fe;
+            color: #1a4a7a;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .anchor-link:hover {
+            background: #1a7ab5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Секции видов вентиляции */
+        .ventilation-section {
+            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .ventilation-section:nth-child(even) {
+            background: #f9fbfe;
+        }
+
+        .ventilation-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .ventilation-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .ventilation-text h2 {
+            color: #0a2b4e;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .ventilation-text h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a7ab5;
+        }
+
+        .ventilation-text p {
+            color: #4a6a8a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 1.2rem 0;
+        }
+
+        .ventilation-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .ventilation-features li {
+            padding: 0.5rem 0;
+            color: #1a2a3a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ventilation-features li:before {
+            content: "✓";
+            color: #1a7ab5;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a4a7a;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .ventilation-image {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .ventilation-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .ventilation-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Таблица цен */
+        .price-table-section {
+            background: #f0f6fe;
+            padding: 3rem 2rem;
+        }
+
+        .price-table-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .price-table-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .price-table {
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-table th {
+            background: #1a4a7a;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .price-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eef2f7;
+            color: #1a2a3a;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tr:hover {
+            background: #f9fbfe;
+        }
+
+        .price-note {
+            text-align: center;
+            color: #4a6a8a;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Преимущества */
+        .advantages {
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .advantages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantages-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9fbfe;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card h3 {
+            color: #0a2b4e;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-card p {
+            color: #4a6a8a;
+            font-size: 0.9rem;
+        }
+
+        /* Форма заявки */
+        .callback {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .callback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .callback-container h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .callback-container p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .callback-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .callback-form input {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            width: 250px;
+            outline: none;
+        }
+
+        .callback-form button {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .callback-form button:hover {
+            background: #e07a00;
+        }
+
+        @media (max-width: 768px) {
+            .ventilation-hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .anchor-nav {
+                top: 130px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .anchor-link {
+                white-space: nowrap;
+            }
+            
+            .ventilation-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .ventilation-text h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .ventilation-text h2 {
+                display: block;
+                text-align: center;
+            }
+            
+            .ventilation-features li {
+                justify-content: center;
+            }
+            
+            .callback-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .callback-form input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .price-table {
+                font-size: 0.85rem;
+            }
+            
+            .price-table th, .price-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Фиксированная шапка белого цвета -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">ПИС</div>
+                <span>ПромИнжСтрой</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-btn">Главная</a>
+                
+                <!-- Выпадающий список Услуги -->
+                <div class="dropdown">
+                    <button class="nav-btn">Услуги ▼</button>
+                    <div class="dropdown-content">
+                         <a href="ventilation.html">Монтаж систем вентиляции</a>
+                        <a href="conditioning.html">Монтаж систем кондиционирования и холодоснабжения</a>
+                        <a href="heating.html">Монтаж систем отопления и теплоснабжения</a>
+                        <a href="water-supply.html">Монтаж водоснабжения, водоотведения и канализации</a>
+                        <a href="fire-suppression.html">Монтаж систем пожаротушения</a>
+                        <a href="pipelines.html">Монтаж и сварочные работы технологических трубопроводов</a>
+                        <a href="cable-systems.html">Монтаж кабеленесущих систем</a>
+                        <a href="installation-design.html">Монтажное проектирвоание</a>
+                        <a href="production-section.html">Заготовительное производство</a>
+                    </div>
+                </div>
+                
+                <a href="../index.html#contacts" class="nav-btn">Контакты</a>
+                <a href="../index.html#portfolio" class="nav-btn">Портфолио</a>
+                <a href="tel:+79158870574" class="nav-btn phone-link">📞 8-915-887-05-74</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Герой-блок страницы -->
+        <div class="ventilation-hero">
+            <h1>Монтаж систем отопления и теплоснабжения</h1>
+            <p>Профессиональный монтаж систем холодоснабжения и кондиционирования промышленных и коммерческих обьектов</p>
+        </div>
+
+        <!-- Якорная навигация -->
+        <div class="anchor-nav">
+            <div class="anchor-nav-container">
+                <a href="#teplosnabzhenie" class="anchor-link">📥 Монтаж систем теплоснабжения</a>
+                <a href="#proizvodstvennoe-otoplenie" class="anchor-link">📤 Отопление производственных зданий</a>
+                <a href="#vozdushnoe-otoplenie" class="anchor-link">🔄 Воздушное отопление</a>
+                <a href="#kommercheskoe-otoplenie" class="anchor-link">🚭 Монтаж отопления коммерческих зданий</a>
+                <a href="#teplovye-uzly" class="anchor-link">🏭 Монтаж тепловых узлов</a>
+                <a href="#prokladka-truboprovodov" class="anchor-link">🏭 Прокладка трубопроводов</a>
+                <a href="#ceny" class="anchor-link">💰 Цены на монтаж отопления</a>
+            </div>
+        </div>
+
+        <!-- Монтаж систем теплоснабжения -->
+        <div id="teplosnabzhenie" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Монтаж систем теплоснабжения</h2>
+                    <p>Система теплоснабжения — это комплекс инженерных решений, обеспечивающих подачу тепловой энергии к потребителям. Мы выполняем монтаж центральных и индивидуальных тепловых пунктов (ЦТП, ИТП), тепловых сетей и узлов учёта, гарантируя стабильное теплоснабжение объектов любой сложности.</p>
+                    <ul class="ventilation-features">
+                        <li>Монтаж ЦТП (центральные тепловые пункты) на микрорайоны и группы зданий</li>
+                        <li>Монтаж ИТП (индивидуальные тепловые пункты) для отдельных зданий</li>
+                        <li>Установка узлов учёта тепловой энергии (УУТЭ)</li>
+                        <li>Прокладка и монтаж тепловых сетей</li>
+                        <li>Настройка автоматики и погодозависимого регулирования</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 50 000 ₽</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260614_105238 — копия.webp" alt="Монтаж систем теплоснабжения" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Отопление производственных зданий -->
+        <div id="proizvodstvennoe-otoplenie" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Отопление производственных зданий</h2>
+                    <p>Отопление производственных зданий — это комплекс инженерных решений для поддержания оптимальной температуры в цехах, складах, ангарах и других промышленных объектах. Мы проектируем и монтируем системы отопления любой мощности с учётом специфики производства.</p>
+                    <ul class="ventilation-features">
+                        <li>Монтаж водяных систем отопления для производств</li>
+                        <li>Установка воздушного отопления (калориферы, тепловентиляторы)</li>
+                        <li>Монтаж инфракрасных систем обогрева</li>
+                        <li>Установка котельного оборудования для производственных цехов</li>
+                        <li>Пусконаладка и гидравлические испытания</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 30 000 ₽</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260618_151603.webp" alt="Отопление производственных зданий" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Воздушное отопление -->
+        <div id="vozdushnoe-otoplenie" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Воздушное отопление</h2>
+                    <p>Воздушное отопление — это система, в которой теплоносителем выступает нагретый воздух. Она обеспечивает быстрый прогрев помещений, равномерное распределение тепла и высокую энергоэффективность. Идеальное решение для производственных цехов, складов, торговых залов и выставочных павильонов.</p>
+                    <ul class="ventilation-features">
+                        <li>Монтаж водяных и электрических калориферов</li>
+                        <li>Установка тепловентиляторов и тепловых пушек</li>
+                        <li>Прокладка воздуховодов и распределительных решёток</li>
+                        <li>Системы автоматического регулирования температуры</li>
+                        <li>Рекуперация тепла — экономия до 60%</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 35 000 ₽</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/Воздушное отопление.jpg" alt="Монтаж воздушного отопления">
+                </div>
+            </div>
+        </div>
+
+        <!-- Отопление коммерческих зданий -->
+        <div id="kommercheskoe-otoplenie" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Монтаж отопления коммерческих зданий</h2>
+                    <p>Системы отопления для коммерческих объектов (торговых центров, офисов, ресторанов, гостиниц, бизнес-центров) должны быть надёжными, экономичными и обеспечивать комфорт для посетителей и персонала. Мы проектируем и монтируем системы отопления любого типа с учётом требований энергоэффективности и архитектурных особенностей зданий.</p>
+                    <ul class="ventilation-features">
+                        <li>Монтаж водяных систем отопления для коммерческих объектов</li>
+                        <li>Установка радиаторов, конвекторов и тёплых полов</li>
+                        <li>Монтаж индивидуальных тепловых пунктов (ИТП)</li>
+                        <li>Установка автоматики и погодозависимого регулирования</li>
+                        <li>Пусконаладка и гидравлические испытания систем</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 25 000 ₽</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/отопление комерч.jpg" alt="Монтаж отопления коммерческих зданий" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Монтаж тепловых узлов -->
+        <div id="teplovye-uzly" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Монтаж тепловых узлов (ИТП, ЦТП)</h2>
+                    <p>Тепловой узел — это центральный элемент системы теплоснабжения здания. Он регулирует подачу теплоносителя, распределяет тепловую энергию по системе отопления и горячего водоснабжения, учитывает потребление тепла. Выполняем монтаж индивидуальных (ИТП) и центральных (ЦТП) тепловых пунктов под ключ.</p>
+                    <ul class="ventilation-features">
+                        <li>Монтаж ИТП и ЦТП любой сложности</li>
+                        <li>Установка узлов учёта тепла и теплосчётчиков</li>
+                        <li>Обвязка тепловых пунктов трубопроводами и арматурой</li>
+                        <li>Монтаж автоматики и контроллеров управления</li>
+                        <li>Пусконаладка и опрессовка систем</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 45 000 ₽</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260614_105233.webp" alt="Монтаж тепловых узлов" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Прокладка трубопроводов -->
+        <div id="prokladka-truboprovodov" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Прокладка трубопроводов</h2>
+                    <p>Прокладка трубопроводов — это основа любой инженерной системы здания. Мы выполняем монтаж трубопроводов для систем отопления, водоснабжения, канализации, технологических нужд и пожаротушения. Работаем с трубами из различных материалов (сталь, полипропилен, ПНД, ПЭ, металлопластик, медь) на объектах любого назначения.</p>
+                    <ul class="ventilation-features">
+                        <li>Прокладка внутренних и наружных трубопроводных систем</li>
+                        <li>Монтаж стояков, магистралей и распределительных сетей</li>
+                        <li>Сварка, пайка, резьбовые и пресс-соединения</li>
+                        <li>Прокладка в штробах, коробах, за подвесными потолками</li>
+                        <li>Теплоизоляция трубопроводов и антикоррозионная защита</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 15 000 ₽</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260617_153406.webp" alt="Прокладка трубопроводов" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Таблица цен -->
+        <div id="ceny" class="price-table-section">
+            <div class="price-table-container">
+                <h2>💰 Стоимость монтажа отопления</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr><th>Вид работ</th><th>Единица измерения</th><th>Цена, руб.</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Монтаж радиатора отопления (подключение)</td><td>шт.</td><td>от 3 000</td></tr>
+                        <tr><td>Монтаж биметаллического радиатора</td><td>шт.</td><td>от 3 500</td></tr>
+                        <tr><td>Монтаж конвектора отопления</td><td>шт.</td><td>от 2 500</td></tr>
+                        <tr><td>Монтаж труб отопления (полипропилен)</td><td>м.п.</td><td>от 350</td></tr>
+                        <tr><td>Монтаж труб отопления (сталь, металлопластик)</td><td>м.п.</td><td>от 450</td></tr>
+                        <tr><td>Монтаж коллектора отопления</td><td>шт.</td><td>от 4 000</td></tr>
+                        <tr><td>Монтаж котла отопления (настенного)</td><td>шт.</td><td>от 12 000</td></tr>
+                        <tr><td>Монтаж котла отопления (напольного)</td><td>шт.</td><td>от 18 000</td></tr>
+                        <tr><td>Монтаж насосной группы</td><td>шт.</td><td>от 5 000</td></tr>
+                        <tr><td>Монтаж тёплого пола (водяного)</td><td>м²</td><td>от 600</td></tr>
+                        <tr><td>Монтаж теплового узла (ИТП, ЦТП)</td><td>шт.</td><td>от 45 000</td></tr>
+                        <tr><td>Монтаж узла учёта тепла (теплосчётчик)</td><td>шт.</td><td>от 8 000</td></tr>
+                        <tr><td>Пусконаладочные работы</td><td>компл.</td><td>от 8 000</td></tr>
+                        <tr><td>Гидравлические испытания (опрессовка)</td><td>компл.</td><td>от 5 000</td></tr>
+                    </tbody>
+                </table>
+                <div class="price-note">* Цены указаны без учета стоимости оборудования и материалов. Точную стоимость рассчитаем после выезда на объект.</div>
+            </div>
+        </div>
+
+        <!-- Преимущества -->
+        <div class="advantages">
+            <div class="advantages-container">
+                <h2>Почему выбирают нас?</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📋</div>
+                        <h3>Проектирование и монтаж</h3>
+                        <p>Полный цикл работ — от проекта до сдачи в эксплуатацию</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🛠️</div>
+                        <h3>Собственное производство</h3>
+                        <p>Изготовление узлов и заготовок на своей базе</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">👷</div>
+                        <h3>Опытные инженеры</h3>
+                        <p>Штатные специалисты с профильным образованием</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🔧</div>
+                        <h3>Гарантия 3 года</h3>
+                        <p>На все виды монтажных работ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма заявки -->
+        <div class="callback">
+            <div class="callback-container">
+                <h2>Нужна консультация?</h2>
+                <p>Оставьте заявку — мы рассчитаем стоимость монтажа вентиляции за 1 час</p>
+                <form class="callback-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <p>📞 Телефон: <a href="tel:+79158870574" style="color: white; text-decoration: none;">8-915-887-05-74</a></p>
+        <p>📧 Email: info@promingstroy.ru</p>
+        <p>📍 Адрес: г. Москва, ул. Инженерная, д. 10</p>
+        <p>© 2025 ПромИнжСтрой — Комплексный монтаж инженерных систем в Москве</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

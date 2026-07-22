@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монтажное проектирование в Revit в Москве | 3D-модели, узлы креплений | ПромИнжСтрой</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* ===== Дополнительные стили ===== */
+        
+        .design-hero {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .design-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .design-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .anchor-nav {
+            background: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-bottom: 1px solid #e8f0fe;
+        }
+
+        .anchor-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .anchor-link {
+            background: #f0f6fe;
+            color: #1a4a7a;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .anchor-link:hover {
+            background: #1a7ab5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .section-block {
+            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .section-block:nth-child(even) {
+            background: #f9fbfe;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-block h2 {
+            color: #0a2b4e;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-block h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a7ab5;
+        }
+
+        .section-block p {
+            color: #4a6a8a;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .section-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .section-block ul li {
+            padding: 0.6rem 0;
+            color: #1a2a3a;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .section-block ul li:before {
+            content: "▸";
+            color: #1a7ab5;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eef2f7;
+            transition: transform 0.3s;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .highlight-card h3 {
+            color: #0a2b4e;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .highlight-card ul li:before {
+            content: "✓";
+            color: #1a7ab5;
+            font-weight: bold;
+        }
+
+        .blue-bg {
+            background: #e8f0fe;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #1a7ab5;
+        }
+
+        .blue-bg strong {
+            color: #0a2b4e;
+        }
+
+        .blue-bg ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .blue-bg ul li {
+            padding: 0.4rem 0;
+            color: #1a2a3a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .blue-bg ul li:before {
+            content: "✓";
+            color: #1a7ab5;
+            font-weight: bold;
+        }
+
+        .stage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .stage-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #eef2f7;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stage-item:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+
+        .stage-number {
+            background: #1a7ab5;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+            font-size: 1.2rem;
+        }
+
+        .stage-item h4 {
+            color: #0a2b4e;
+            margin-bottom: 0.5rem;
+        }
+
+        .stage-item p {
+            font-size: 0.9rem;
+            color: #4a6a8a;
+        }
+
+        /* ===== ГАЛЕРЕЯ 2D-ЧЕРТЕЖЕЙ (ПО ПЕРИМЕТРУ) ===== */
+        .gallery-2d {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .gallery-2d img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .gallery-2d img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ===== КАРТИНКА С МОДЕЛЬЮ (ВО ВСЮ ШИРИНУ) ===== */
+        .model-full {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin: 1.5rem 0;
+            transition: transform 0.3s;
+        }
+
+        .model-full:hover {
+            transform: scale(1.01);
+        }
+
+        .image-caption {
+            text-align: center;
+            color: #4a6a8a;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== КАРТИНКА С ДЕТАЛИЗАЦИЕЙ ===== */
+        .detail-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .detail-container img {
+            flex: 1;
+            min-width: 280px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .detail-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .detail-text h3 {
+            color: #0a2b4e;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .detail-text p {
+            color: #4a6a8a;
+            line-height: 1.6;
+        }
+
+        .advantages {
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .advantages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantages-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9fbfe;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card h3 {
+            color: #0a2b4e;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-card p {
+            color: #4a6a8a;
+            font-size: 0.9rem;
+        }
+
+        .callback {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .callback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .callback-container h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .callback-container p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .callback-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .callback-form input {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            width: 250px;
+            outline: none;
+        }
+
+        .callback-form button {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .callback-form button:hover {
+            background: #e07a00;
+        }
+
+        @media (max-width: 768px) {
+            .design-hero h1 {
+                font-size: 1.6rem;
+            }
+            .anchor-nav {
+                top: 130px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .anchor-link {
+                white-space: nowrap;
+            }
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+            .gallery-2d {
+                grid-template-columns: 1fr 1fr;
+            }
+            .section-block h2 {
+                font-size: 1.4rem;
+                display: block;
+                text-align: center;
+            }
+            .section-block h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .callback-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            .callback-form input {
+                width: 100%;
+                max-width: 300px;
+            }
+            .blue-bg {
+                padding: 1rem;
+            }
+            .detail-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-2d {
+                grid-template-columns: 1fr;
+            }
+            .gallery-2d img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">ПИС</div>
+                <span>ПромИнжСтрой</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-btn">Главная</a>
+                <div class="dropdown">
+                    <button class="nav-btn">Услуги ▼</button>
+                    <div class="dropdown-content">
+                         <a href="ventilation.html">Монтаж систем вентиляции</a>
+                        <a href="conditioning.html">Монтаж систем кондиционирования и холодоснабжения</a>
+                        <a href="heating.html">Монтаж систем отопления и теплоснабжения</a>
+                        <a href="water-supply.html">Монтаж водоснабжения, водоотведения и канализации</a>
+                        <a href="fire-suppression.html">Монтаж систем пожаротушения</a>
+                        <a href="pipelines.html">Монтаж и сварочные работы технологических трубопроводов</a>
+                        <a href="cable-systems.html">Монтаж кабеленесущих систем</a>
+                        <a href="installation-design.html">Монтажное проектирвоание</a>
+                        <a href="production-section.html">Заготовительное производство</a>
+                    </div>
+                </div>
+                <a href="../index.html#contacts" class="nav-btn">Контакты</a>
+                <a href="../index.html#portfolio" class="nav-btn">Портфолио</a>
+                <a href="tel:+79158870574" class="nav-btn phone-link">📞 8-915-887-05-74</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- ===== ГЕРОЙ-БЛОК ===== -->
+        <div class="design-hero">
+            <h1>Монтажное проектирование инженерных систем в Москве (Revit)</h1>
+            <p>Разработка монтажных проектов, 3D-моделей и узлов креплений для ускорения монтажа до 40%</p>
+        </div>
+
+        <!-- ===== ЯКОРНАЯ НАВИГАЦИЯ ===== -->
+        <div class="anchor-nav">
+            <div class="anchor-nav-container">
+                <a href="#2d-vs-3d" class="anchor-link">📐 2D → 3D координация</a>
+                <a href="#model" class="anchor-link">🏗️ Сводная 3D-модель</a>
+                <a href="#otoplenie" class="anchor-link">🔥 Детализация отопления</a>
+                <a href="#ventilyaciya" class="anchor-link">🌬️ Детализация вентиляции</a>
+                <a href="#uzly" class="anchor-link">🔩 Узлы креплений</a>
+                <a href="#industrial" class="anchor-link">🏭 Индустриальные методы</a>
+                <a href="#etalon" class="anchor-link">✅ Эталонный узел</a>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 1: 2D vs 3D ===== -->
+        <div id="2d-vs-3d" class="section-block">
+            <div class="container">
+                <h2>2D-чертежи vs 3D-модель: почему 2D недостаточно</h2>
+                <p>На одном участке промышленного здания пересекаются несколько инженерных систем: электроснабжение (ЭО), водоснабжение и канализация (ВК), противопожарный водопровод (ВПР), вентиляция (ОВ), дымоудаление и другие. В 2D-чертежах невозможно увидеть все коллизии между системами. Только в 3D-монтажной модели можно точно скоординировать каждую систему и избежать ошибок на стройплощадке.</p>
+
+                <!-- ГАЛЕРЕЯ 2D-ЧЕРТЕЖЕЙ -->
+                <div class="gallery-2d">
+                    <img src="../images/ЭО.jpg" alt="Электроснабжение (ЭО) — 2D чертеж">
+                    <img src="../images/ВК1.jpg" alt="Водоснабжение и канализация (ВК) — 2D чертеж">
+                    <img src="../images/ВПР_01.jpg" alt="Противопожарный водопровод (ВПР) — 2D чертеж">
+                    <img src="../images/ОВ_1.jpg" alt="Вентиляция (ОВ) — 2D чертеж">
+                    <img src="../images/ОВ_2.jpg" alt="Вентиляция (ОВ) — разрез">
+                    <img src="../images/ЭМ.jpg" alt="Электромонтаж (ЭМ) — 2D чертеж">
+                </div>
+
+                <div class="blue-bg">
+                    <strong>Важно:</strong> Для монтажа одного раздела необходимо учитывать все остальные системы. Только работа на основании разработанной 3D-монтажной модели позволяет это сделать с высокой точностью.
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 2: СВОДНАЯ 3D-МОДЕЛЬ ===== -->
+        <div id="model" class="section-block">
+            <div class="container">
+                <h2>Сводная 3D-модель — координация всех систем</h2>
+                <p>Сводная 3D-модель объединяет все инженерные системы в едином пространстве с привязкой к осям здания. Это позволяет увидеть, как проходят трубопроводы, воздуховоды, кабельные трассы и оборудование относительно друг друга, и своевременно устранить коллизии.</p>
+
+                <img src="../images/МП_1.jpg" alt="Сводная 3D-модель всех инженерных систем в Revit" class="model-full" 
+                                                                                                        width="300" 
+                                                                                                        height="900">
+
+                <div class="blue-bg">
+                    <strong>Результат 3D-координации:</strong>
+                    <ul>
+                        <li>Исключение пересечений трубопроводов и воздуховодов</li>
+                        <li>Оптимальная трассировка каждой системы</li>
+                        <li>Точная привязка к строительным конструкциям</li>
+                        <li>Сокращение переделок на объекте до минимума</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 3: ДЕТАЛИЗАЦИЯ ОТОПЛЕНИЯ ===== -->
+        <div id="otoplenie" class="section-block">
+            <div class="container">
+                <h2>Детализация системы отопления</h2>
+                <p>Проработка системы отопления в Revit позволяет определить точные монтажные положения трубопроводов, радиаторов, арматуры и узлов креплений. Все размеры и привязки фиксируются в монтажных чертежах.</p>
+
+                <div class="detail-container">
+                    <img src="../images/МП_2.jpg" alt="Детализация системы отопления в Revit">
+                    <div class="detail-text">
+                        <h3>Что прорабатывается в системе отопления</h3>
+                        <ul>
+                            <li>Трассировка трубопроводов с привязкой к конструкциям</li>
+                            <li>Размещение отопительных приборов</li>
+                            <li>Узлы креплений и опорные конструкции</li>
+                            <li>Запорно-регулирующая арматура</li>
+                            <li>Схемы подключения и заготовительные длины</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 4: ДЕТАЛИЗАЦИЯ ВЕНТИЛЯЦИИ ===== -->
+        <div id="ventilyaciya" class="section-block">
+            <div class="container">
+                <h2>Детализация системы вентиляции</h2>
+                <p>Проработка системы вентиляции в 3D-модели позволяет точно разместить воздуховоды, вентиляционное оборудование, арматуру и воздухораспределители с учётом строительных конструкций и других инженерных систем.</p>
+
+                <div class="detail-container">
+                    <img src="../images/МП_3.jpg" alt="Детализация системы вентиляции в Revit">
+                    <div class="detail-text">
+                        <h3>Что прорабатывается в системе вентиляции</h3>
+                        <ul>
+                            <li>Трассировка воздуховодов с учётом габаритов</li>
+                            <li>Размещение вентиляционного оборудования</li>
+                            <li>Узлы креплений воздуховодов</li>
+                            <li>Воздухораспределители и решётки</li>
+                            <li>Заготовительные длины и деталировка</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 5: УЗЛЫ КРЕПЛЕНИЙ ===== -->
+        <div id="uzly" class="section-block">
+            <div class="container">
+                <h2>Узлы креплений в 3D-модели</h2>
+                <p>Разработка узлов креплений — важнейшая часть монтажного проектирования. В 3D-модели мы прорабатываем все типы креплений: консоли, подвесы, траверсы, опорные стойки, обеспечивая надёжную фиксацию трубопроводов и воздуховодов.</p>
+
+                <img src="../images/МП_4.jpg" alt="Узлы креплений в 3D-модели Revit" class="model-full">
+
+                <div class="two-columns">
+                    <div class="highlight-card">
+                        <h3>Индивидуальные узлы</h3>
+                        <ul>
+                            <li>Под сложные архитектурные решения</li>
+                            <li>С учетом конкретных строительных конструкций</li>
+                            <li>Разработка по индивидуальному заказу</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Комплексные узлы</h3>
+                        <ul>
+                            <li>Опорные стойки, объединяющие несколько трубопроводов</li>
+                            <li>Узлы сочленения воздухораспределителей с подвесным потолком</li>
+                            <li>Типовые решения для массового применения</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blue-bg">
+                    <strong>Монтажное положение</strong> — рациональное расположение отопительных приборов, трубопроводов, воздуховодов и оборудования относительно строительных конструкций, обеспечивающее удобный монтаж и безопасную эксплуатацию.
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 6: ИНДУСТРИАЛЬНЫЙ МЕТОД ===== -->
+        <div id="industrial" class="section-block">
+            <div class="container">
+                <h2>Индустриальные методы — перенос работ в цех</h2>
+                <p>Цель монтажного проектирования — увести сложные операции с объекта в заготовительный цех. Индустриальные методы проявляются в минимуме объемов монтажных работ на объекте и переносе максимального количества трудоемких операций на заготовительные участки.</p>
+                
+                <div class="two-columns">
+                    <div class="highlight-card">
+                        <h3>Заготовительный участок (ЦЗМ)</h3>
+                        <ul>
+                            <li>Изготовление узлов креплений по нашим чертежам</li>
+                            <li>Подготовка трубопроводов: резка, калибровка, снятие фасок</li>
+                            <li>Сварка узлов на стационарных постах</li>
+                            <li>Антикоррозионная обработка (очистка, грунтовка, окраска)</li>
+                            <li>Гидравлические испытания до отправки на объект</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Преимущества метода</h3>
+                        <ul>
+                            <li>Исключение попадания окалины и грязи в трубопроводы</li>
+                            <li>Надежность систем — гарантия долговечности арматуры</li>
+                            <li>Пуск систем по мере готовности строительных конструкций</li>
+                            <li>Сокращение сроков монтажа на 30–40%</li>
+                            <li>Контроль качества в цеховых условиях</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blue-bg">
+                    <strong>Укрупненный блок</strong> — полностью подогнанный узел на опорной раме, обвязанный трубопроводами, прошедший испытания и покрашенный. Готов к установке на объекте.
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 7: ЭТАЛОННЫЙ УЗЕЛ ===== -->
+        <div id="etalon" class="section-block">
+            <div class="container">
+                <h2>Эталонный узел — гарантия качества</h2>
+                <p>Чтобы исключить ошибки перед запуском в серию, мы используем технологию <strong>«Эталонного узла»</strong>. Окончательное решение принимается после монтажа эталонного узла и согласования его с заказчиком и проектной организацией.</p>
+                <div class="stage-grid">
+                    <div class="stage-item">
+                        <div class="stage-number">1</div>
+                        <h4>Изготовление эталона</h4>
+                        <p>Производим контрольный узел на базе ЦЗМ или непосредственно на объекте. Проверяем все соединения и габариты.</p>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-number">2</div>
+                        <h4>Сверка с моделью</h4>
+                        <p>Сверяем изготовленный узел с разработанной 3D-моделью в Revit. Проверяем соответствие всем размерам и узлам креплений.</p>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-number">3</div>
+                        <h4>Согласование</h4>
+                        <p>Утверждаем эталон совместно с <strong>Заказчиком</strong> и <strong>Проектной организацией</strong>. Подписываем акт согласования.</p>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-number">4</div>
+                        <h4>Тиражирование</h4>
+                        <p>После утверждения эталона запускаем серийное изготовление остальных узлов. Гарантия идентичности.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+        <div class="advantages">
+            <div class="advantages-container">
+                <h2>Почему монтажное проектирование экономит ваши деньги</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">⏱️</div>
+                        <h3>Скорость</h3>
+                        <p>Сокращение сроков монтажа на 30–40% за счет переноса работ в цех</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">✅</div>
+                        <h3>Качество</h3>
+                        <p>Контроль качества на заводе (окраска, испытания), а не на стремянке</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📐</div>
+                        <h3>Без коллизий</h3>
+                        <p>Revit-модель избавляет от «битвы» вентиляции и труб на объекте</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">💰</div>
+                        <h3>Экономия</h3>
+                        <p>Точные ведомости, отсутствие перерасхода материалов и простоев</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ФОРМА ЗАЯВКИ ===== -->
+        <div class="callback">
+            <div class="callback-container">
+                <h2>Закажите разработку монтажного проекта</h2>
+                <p>Приложите файл проекта (IFC, DWG, RVT) — мы рассчитаем стоимость за 1 час</p>
+                <form class="callback-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===== ФУТЕР ===== -->
+    <footer class="footer" id="contacts">
+        <p>📞 Телефон: <a href="tel:+79158870574" style="color: white; text-decoration: none;">8-915-887-05-74</a></p>
+        <p>📧 Email: info@promingstroy.ru</p>
+        <p>📍 Адрес: г. Москва, ул. Инженерная, д. 10</p>
+        <p>© 2025 ПромИнжСтрой — Монтажное проектирование инженерных систем в Revit</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

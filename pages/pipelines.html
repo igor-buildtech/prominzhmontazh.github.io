@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монтаж технологических трубопроводов в Москве | Изготовление узлов | ПромИнжСтрой</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* ===== Дополнительные стили для страницы технологических трубопроводов ===== */
+        
+        .pipe-hero {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .pipe-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .pipe-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .anchor-nav {
+            background: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-bottom: 1px solid #e8f0fe;
+        }
+
+        .anchor-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .anchor-link {
+            background: #f0f6fe;
+            color: #1a4a7a;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .anchor-link:hover {
+            background: #1a7ab5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .pipe-section {
+            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .pipe-section:nth-child(even) {
+            background: #f9fbfe;
+        }
+
+        .pipe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .pipe-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .pipe-text h2 {
+            color: #0a2b4e;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .pipe-text h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a7ab5;
+        }
+
+        .pipe-text p {
+            color: #4a6a8a;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 1.2rem 0;
+        }
+
+        .pipe-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .pipe-features li {
+            padding: 0.5rem 0;
+            color: #1a2a3a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pipe-features li:before {
+            content: "✓";
+            color: #1a7ab5;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a4a7a;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .pipe-image {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .pipe-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .pipe-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .pipe-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .pipe-tag {
+            background: white;
+            border: 1px solid #1a7ab5;
+            color: #1a7ab5;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .pipe-tag:hover {
+            background: #1a7ab5;
+            color: white;
+        }
+
+        .price-table-section {
+            background: #f0f6fe;
+            padding: 3rem 2rem;
+        }
+
+        .price-table-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .price-table-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .price-table {
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-table th {
+            background: #1a4a7a;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .price-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eef2f7;
+            color: #1a2a3a;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tr:hover {
+            background: #f9fbfe;
+        }
+
+        .price-note {
+            text-align: center;
+            color: #4a6a8a;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        .advantages {
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .advantages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantages-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9fbfe;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card h3 {
+            color: #0a2b4e;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-card p {
+            color: #4a6a8a;
+            font-size: 0.9rem;
+        }
+
+        .callback {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .callback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .callback-container h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .callback-container p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .callback-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .callback-form input {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            width: 250px;
+            outline: none;
+        }
+
+        .callback-form button {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .callback-form button:hover {
+            background: #e07a00;
+        }
+
+        @media (max-width: 768px) {
+            .pipe-hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .anchor-nav {
+                top: 130px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .anchor-link {
+                white-space: nowrap;
+            }
+            
+            .pipe-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .pipe-text h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .pipe-text h2 {
+                display: block;
+                text-align: center;
+            }
+            
+            .pipe-features li {
+                justify-content: center;
+            }
+            
+            .callback-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .callback-form input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .price-table {
+                font-size: 0.85rem;
+            }
+            
+            .price-table th, .price-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">ПИС</div>
+                <span>ПромИнжСтрой</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-btn">Главная</a>
+                <div class="dropdown">
+                    <button class="nav-btn">Услуги ▼</button>
+                    <div class="dropdown-content">
+                        <a href="ventilation.html">Монтаж систем вентиляции</a>
+                        <a href="conditioning.html">Монтаж систем кондиционирования и холодоснабжения</a>
+                        <a href="heating.html">Монтаж систем отопления и теплоснабжения</a>
+                        <a href="water-supply.html">Монтаж водоснабжения, водоотведения и канализации</a>
+                        <a href="fire-suppression.html">Монтаж систем пожаротушения</a>
+                        <a href="pipelines.html">Монтаж и сварочные работы технологических трубопроводов</a>
+                        <a href="cable-systems.html">Монтаж кабеленесущих систем</a>
+                        <a href="installation-design.html">Монтажное проектирвоание</a>
+                        <a href="production-section.html">Заготовительное производство</a>
+                    </div>
+                </div>
+                <a href="../index.html#contacts" class="nav-btn">Контакты</a>
+                <a href="../index.html#portfolio" class="nav-btn">Портфолио</a>
+                <a href="tel:+79158870574" class="nav-btn phone-link">📞 8-915-887-05-74</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- ===== ГЕРОЙ-БЛОК ===== -->
+        <div class="pipe-hero">
+            <h1>Монтаж технологических трубопроводов в Москве</h1>
+            <p>Профессиональный монтаж технологических трубопроводов под ключ. Изготовление узлов, сварка, испытания, полный пакет документов.</p>
+        </div>
+
+        <!-- ===== ЯКОРНАЯ НАВИГАЦИЯ ===== -->
+        <div class="anchor-nav">
+            <div class="anchor-nav-container">
+                <a href="#izgotovlenie" class="anchor-link">🏭 Изготовление и монтаж узлов</a>
+                <a href="#stalnye" class="anchor-link">🔩 Стальные трубопроводы</a>
+                <a href="#nerzhaveyushchie" class="anchor-link">⚪ Нержавеющие трубопроводы</a>
+                <a href="#svarka" class="anchor-link">🔥 Сварочные работы</a>
+                <a href="#ispytaniya" class="anchor-link">🔬 Испытания трубопроводов</a>
+                <a href="#dokumentatsiya" class="anchor-link">📄 Документация</a>
+                <a href="#ceny" class="anchor-link">💰 Стоимость работ</a>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 1: ИЗГОТОВЛЕНИЕ И МОНТАЖ ===== -->
+        <div id="izgotovlenie" class="pipe-section">
+            <div class="pipe-container">
+                <div class="pipe-text">
+                    <h2>Изготовление и монтаж узлов трубопроводов</h2>
+                    <p>Полный цикл производства и монтажа технологических трубопроводов — от разработки узлов до поставки на объект. Комплект поставки включает все необходимые элементы.</p>
+                    <ul class="pipe-features">
+                        <li>Изготовление узлов по чертежам заказчика</li>
+                        <li>Полный цикл — от заготовки до монтажа</li>
+                        <li>Комплект поставки с арматурой и креплениями</li>
+                        <li>Маркировка и упаковка готовых узлов</li>
+                        <li>Доставка на объект в срок</li>
+                    </ul>
+                    <div class="price-badge">Цена: рассчитывается индивидуально</div>
+                </div>
+                <div class="pipe-image">
+                    <img src="../images/TH_01.jpg" alt="Изготовление узлов трубопроводов" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Изготовление+узлов'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 2: СТАЛЬНЫЕ ТРУБОПРОВОДЫ ===== -->
+        <div id="stalnye" class="pipe-section">
+            <div class="pipe-container">
+                <div class="pipe-text">
+                    <h2>Монтаж стальных трубопроводов</h2>
+                    <p>Монтаж технологических трубопроводов из углеродистой и легированной стали для промышленных объектов, котельных, насосных станций и магистральных сетей.</p>
+                    <ul class="pipe-features">
+                        <li>Монтаж стальных труб различного диаметра</li>
+                        <li>Сварка и сборка узлов</li>
+                        <li>Установка запорной арматуры</li>
+                        <li>Антикоррозионная защита трубопроводов</li>
+                        <li>Гидравлические испытания</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 800 ₽/м.п.</div>
+                </div>
+                <div class="pipe-image">
+                    <img src="../images/TH_02.jpg" alt="Монтаж стальных трубопроводов" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Стальные+трубопроводы'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 3: НЕРЖАВЕЮЩИЕ ТРУБОПРОВОДЫ ===== -->
+        <div id="nerzhaveyushchie" class="pipe-section">
+            <div class="pipe-container">
+                <div class="pipe-text">
+                    <h2>Монтаж трубопроводов из нержавеющей стали</h2>
+                    <p>Профессиональный монтаж трубопроводов из нержавеющей стали для пищевой, химической, фармацевтической промышленности и объектов с особыми требованиями к чистоте.</p>
+                    <ul class="pipe-features">
+                        <li>Монтаж труб AISI 304, 316, 321</li>
+                        <li>TIG сварка неплавящимся электродом</li>
+                        <li>Сборка узлов с арматурой из нержавейки</li>
+                        <li>Контроль качества сварных швов</li>
+                        <li>Санитарная обработка поверхности</li>
+                    </ul>
+                    <div class="price-badge">Цена монтажа: от 1 200 ₽/м.п.</div>
+                </div>
+                <div class="pipe-image">
+                    <img src="../images/TH_03.jpg" alt="Монтаж нержавеющих трубопроводов" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Нержавеющие+трубопроводы'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 4: СВАРОЧНЫЕ РАБОТЫ ===== -->
+        <div id="svarka" class="pipe-section">
+            <div class="pipe-container">
+                <div class="pipe-text">
+                    <h2>Сварочные работы при монтаже трубопроводов</h2>
+                    <p>Сварочные работы по монтажу технологических трубопроводов выполняются аттестованными сварщиками НКС с использованием современных технологий и методов контроля качества.</p>
+                    <ul class="pipe-features">
+                        <li>Ручная дуговая сварка (MMA)</li>
+                        <li>Аргонодуговая сварка неплавящимся электродом (TIG)</li>
+                        <li>Полуавтоматическая сварка (MIG/MAG)</li>
+                        <li>Аттестованные сварщики НКС</li>
+                        <li>Визуальный и измерительный контроль швов</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 1 500 ₽ за стык</div>
+                </div>
+                <div class="pipe-image">
+                    <img src="../images/TH_04.jpg" alt="Сварочные работы" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Сварочные+работы'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 5: ИСПЫТАНИЯ ===== -->
+        <div id="ispytaniya" class="pipe-section">
+            <div class="pipe-container">
+                <div class="pipe-text">
+                    <h2>Испытания технологических трубопроводов</h2>
+                    <p>Проведение гидравлических и пневматических испытаний смонтированных трубопроводов. Оформление актов и протоколов испытаний в соответствии с нормативными документами.</p>
+                    <ul class="pipe-features">
+                        <li>Гидравлические испытания давлением</li>
+                        <li>Пневматические испытания на герметичность</li>
+                        <li>Опрессовка трубопроводов</li>
+                        <li>Контроль сварных соединений</li>
+                        <li>Оформление актов и протоколов</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 5 000 ₽</div>
+                </div>
+                <div class="pipe-image">
+                    <img src="../images/TH_05.jpg" alt="Испытания трубопроводов" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Испытания+трубопроводов'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 6: ДОКУМЕНТАЦИЯ ===== -->
+        <div id="dokumentatsiya" class="pipe-section">
+            <div class="pipe-container">
+                <div class="pipe-text">
+                    <h2>Документация (технологические карты, инструкции, ППР)</h2>
+                    <p>Разработка и оформление полного пакета документации для монтажа технологических трубопроводов: технологические карты, инструкции, проекты производства работ (ППР) и паспорта.</p>
+                    <ul class="pipe-features">
+                        <li>Технологические карты на монтаж</li>
+                        <li>Инструкции по производству работ</li>
+                        <li>Проекты производства работ (ППР)</li>
+                        <li>Паспорта на трубопроводы</li>
+                        <li>Исполнительная документация</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 10 000 ₽</div>
+                </div>
+                <div class="pipe-image">
+                    <img src="../images/TH_07.jpg" alt="Документация" onerror="this.src='https://placehold.co/500x400/1a7ab5/white?text=Документация'">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== БЛОК 7: ТАБЛИЦА ЦЕН ===== -->
+        <div id="ceny" class="price-table-section">
+            <div class="price-table-container">
+                <h2>💰 Стоимость монтажа технологических трубопроводов</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr><th>Вид работ</th><th>Единица измерения</th><th>Цена, руб.</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Монтаж стального трубопровода (до 100 мм)</td><td>м.п.</td><td>от 800</td></tr>
+                        <tr><td>Монтаж стального трубопровода (100-300 мм)</td><td>м.п.</td><td>от 1 200</td></tr>
+                        <tr><td>Монтаж стального трубопровода (300-500 мм)</td><td>м.п.</td><td>от 1 800</td></tr>
+                        <tr><td>Монтаж трубопровода из нержавейки (до 100 мм)</td><td>м.п.</td><td>от 1 200</td></tr>
+                        <tr><td>Монтаж трубопровода из нержавейки (100-300 мм)</td><td>м.п.</td><td>от 1 800</td></tr>
+                        <tr><td>Сварка трубы (TIG, сталь/нержавейка)</td><td>стык</td><td>от 1 500</td></tr>
+                        <tr><td>Сварка трубы (MMA, сталь)</td><td>стык</td><td>от 1 200</td></tr>
+                        <tr><td>Изготовление узла трубопровода</td><td>шт.</td><td>от 5 000</td></tr>
+                        <tr><td>Гидравлические испытания</td><td>компл.</td><td>от 5 000</td></tr>
+                        <tr><td>Пневматические испытания</td><td>компл.</td><td>от 6 000</td></tr>
+                        <tr><td>Разработка ППР</td><td>компл.</td><td>от 10 000</td></tr>
+                        <tr><td>Разработка технологической карты</td><td>шт.</td><td>от 4 000</td></tr>
+                    </tbody>
+                </table>
+                <div class="price-note">* Цены указаны без учета стоимости материалов и оборудования. Точную стоимость рассчитаем после выезда на объект.</div>
+            </div>
+        </div>
+
+        <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+        <div class="advantages">
+            <div class="advantages-container">
+                <h2>Почему выбирают нас?</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🏭</div>
+                        <h3>Собственное производство</h3>
+                        <p>Изготовление узлов на современном оборудовании</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">👨‍🏭</div>
+                        <h3>Аттестованные сварщики</h3>
+                        <p>Сварщики с допусками НКС</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📋</div>
+                        <h3>Полный пакет документов</h3>
+                        <p>Техкарты, ППР, паспорта</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🔧</div>
+                        <h3>Гарантия 3 года</h3>
+                        <p>На все виды монтажных и сварочных работ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ФОРМА ЗАЯВКИ ===== -->
+        <div class="callback">
+            <div class="callback-container">
+                <h2>Нужен монтаж технологических трубопроводов?</h2>
+                <p>Оставьте заявку — мы рассчитаем стоимость за 1 час</p>
+                <form class="callback-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===== ФУТЕР ===== -->
+    <footer class="footer" id="contacts">
+        <p>📞 Телефон: <a href="tel:+79158870574" style="color: white; text-decoration: none;">8-915-887-05-74</a></p>
+        <p>📧 Email: info@promingstroy.ru</p>
+        <p>📍 Адрес: г. Москва, ул. Инженерная, д. 10</p>
+        <p>© 2025 ПромИнжСтрой — Монтаж технологических трубопроводов в Москве</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

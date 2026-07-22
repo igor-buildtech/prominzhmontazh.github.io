@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заготовительное производство трубопроводов в Москве | Изготовление узлов под заказ | ПромИнжСтрой</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Дополнительные стили для страницы заготовительного производства */
+        
+        /* Герой-блок */
+        .production-hero {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .production-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .production-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Якорная навигация */
+        .anchor-nav {
+            background: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-bottom: 1px solid #e8f0fe;
+        }
+
+        .anchor-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .anchor-link {
+            background: #f0f6fe;
+            color: #1a4a7a;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .anchor-link:hover {
+            background: #1a7ab5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Индустриальный блок (цитата) */
+        .industrial-block {
+            background: linear-gradient(135deg, #e8f0fe 0%, #d4e4f8 100%);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .industrial-block p {
+            font-size: 1.2rem;
+            color: #0a2b4e;
+            font-weight: 500;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .industrial-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Секции операций */
+        .operation-section {
+            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .operation-section:nth-child(even) {
+            background: #f9fbfe;
+        }
+
+        .operation-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .operation-container h2 {
+            color: #0a2b4e;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .operation-container h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a7ab5;
+        }
+
+        /* Сетка операций (для мелких операций) */
+        .operations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .operation-item {
+            background: white;
+            border: 1px solid #eef2f7;
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+        }
+
+        .operation-item:hover {
+            transform: translateX(5px);
+            border-color: #1a7ab5;
+            box-shadow: 0 4px 12px rgba(26,122,181,0.1);
+        }
+
+        .operation-icon {
+            font-size: 1.5rem;
+        }
+
+        .operation-item span {
+            color: #1a2a3a;
+            font-size: 0.95rem;
+        }
+
+        /* Этапы подготовки */
+        .stage-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #eef2f7;
+        }
+
+        .stage-title {
+            color: #0a2b4e;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stage-title:before {
+            content: "▸";
+            color: #1a7ab5;
+        }
+
+        .stage-text {
+            color: #4a6a8a;
+            line-height: 1.6;
+            margin-left: 1.5rem;
+        }
+
+        /* Карточка для узлов крепления */
+        .mounting-knots {
+            background: #f0f6fe;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .mounting-knots h3 {
+            color: #0a2b4e;
+            margin-bottom: 1rem;
+        }
+
+        .knot-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .knot-list li {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            color: #1a4a7a;
+            font-size: 0.9rem;
+        }
+
+        /* Таблица технологий */
+        .tech-table {
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 1.5rem;
+        }
+
+        .tech-table th {
+            background: #1a4a7a;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .tech-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        /* Преимущества */
+        .advantages {
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .advantages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantages-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9fbfe;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card h3 {
+            color: #0a2b4e;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-card p {
+            color: #4a6a8a;
+            font-size: 0.9rem;
+        }
+
+        /* Форма заявки */
+        .callback {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .callback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .callback-container h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .callback-container p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .callback-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .callback-form input {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            width: 250px;
+            outline: none;
+        }
+
+        .callback-form button {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .callback-form button:hover {
+            background: #e07a00;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .production-hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .anchor-nav {
+                top: 130px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .anchor-link {
+                white-space: nowrap;
+            }
+            
+            .operation-container h2 {
+                font-size: 1.4rem;
+                display: block;
+                text-align: center;
+            }
+            
+            .operation-container h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .industrial-block p {
+                font-size: 1rem;
+            }
+            
+            .callback-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .callback-form input {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Фиксированная шапка -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">ПИС</div>
+                <span>ПромИнжСтрой</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-btn">Главная</a>
+                <div class="dropdown">
+                    <button class="nav-btn">Услуги ▼</button>
+                    <div class="dropdown-content">
+                         <a href="ventilation.html">Монтаж систем вентиляции</a>
+                        <a href="conditioning.html">Монтаж систем кондиционирования и холодоснабжения</a>
+                        <a href="heating.html">Монтаж систем отопления и теплоснабжения</a>
+                        <a href="water-supply.html">Монтаж водоснабжения, водоотведения и канализации</a>
+                        <a href="fire-suppression.html">Монтаж систем пожаротушения</a>
+                        <a href="pipelines.html">Монтаж и сварочные работы технологических трубопроводов</a>
+                        <a href="cable-systems.html">Монтаж кабеленесущих систем</a>
+                        <a href="installation-design.html">Монтажное проектирвоание</a>
+                        <a href="production-section.html">Заготовительное производство</a>
+                    </div>
+                </div>
+                <a href="../index.html#contacts" class="nav-btn">Контакты</a>
+                <a href="../index.html#portfolio" class="nav-btn">Портфолио</a>
+                <a href="tel:+79158870574" class="nav-btn phone-link">📞 8-915-887-05-74</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Герой-блок -->
+        <div class="production-hero">
+            <h1>Заготовительное производство узлов трубопроводов и металлоконструкций</h1>
+            <p>Собственное производство в Москве — полный цикл подготовки деталей и узлов для монтажа инженерных систем</p>
+        </div>
+
+        <!-- Якорная навигация -->
+        <div class="anchor-nav">
+            <div class="anchor-nav-container">
+                <a href="#podgotovka-obekta" class="anchor-link">📋 Подготовка объекта</a>
+                <a href="#uzly-krepleniya" class="anchor-link">🔩 Узлы крепления</a>
+                <a href="#obrabotka-trub" class="anchor-link">🔧 Обработка труб</a>
+                <a href="#svarka" class="anchor-link">⚡ Сварочный участок</a>
+                <a href="#antikorrozionnaya" class="anchor-link">🛡️ Антикоррозионная защита</a>
+                <a href="#ispytaniya" class="anchor-link">🔬 Испытания и контроль</a>
+                <a href="#polimernye" class="anchor-link">🧪 Полимерные трубы</a>
+            </div>
+        </div>
+
+        <!-- Блок: Индустриальные методы монтажа (ключевая цитата) -->
+        <div class="operation-section">
+            <div class="operation-container">
+                <div class="industrial-block">
+                    <div class="industrial-icon">🏭</div>
+                    <p>Индустриальные методы монтажа внутренних инженерных систем проявляются в минимуме объемов монтажно-сборочных работ — перенос максимального количества трудоемких операций на заготовительные участки</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 1: Подготовка и приемка объекта -->
+        <div id="podgotovka-obekta" class="operation-section">
+            <div class="operation-container">
+                <h2>Подготовка и приемка объекта (захватки) под монтаж</h2>
+                <div class="stage-card">
+                    <div class="stage-title">Акт передачи помещения под монтаж</div>
+                    <div class="stage-text">
+                        Передача объекта (захватки) под монтаж осуществляется по двустороннему акту между заказчиком и подрядчиком. 
+                        Акт фиксирует готовность строительной части, наличие подъездных путей, освещения, отопления и условий для безопасного производства работ.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 2: Узлы крепления -->
+        <div id="uzly-krepleniya" class="operation-section">
+            <div class="operation-container">
+                <h2>Изготовление узлов крепления</h2>
+                <div class="mounting-knots">
+                    <h3>Узлы креплений</h3>
+                    <ul class="knot-list">
+                        <li>Консоли и кронштейны</li>
+                        <li>Подвесы и траверсы</li>
+                        <li>Хомуты и скобы</li>
+                        <li>Опорные конструкции</li>
+                        <li>Закладные детали</li>
+                        <li>Индивидуальные узлы по проекту</li>
+                    </ul>
+                </div>
+                <div class="stage-card" style="margin-top: 1rem;">
+                    <div class="stage-title">Изготовление средств креплений</div>
+                    <div class="stage-text">
+                        Изготовление крепежных узлов на заготовительном участке позволяет сократить время монтажа на объекте до 40%. 
+                        Все узлы проходят контроль геометрии и качества сварных соединений.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 3: Изготовление деталей и узлов трубопроводов (основной) -->
+        <div id="obrabotka-trub" class="operation-section">
+            <div class="operation-container">
+                <h2>Изготовление деталей и узлов трубопроводов</h2>
+                
+                <div class="stage-card">
+                    <div class="stage-title">Резка труб</div>
+                    <div class="stage-text">
+                        Резка стальных и нержавеющих труб в размер на ленточнопильных и дисковых станках с точностью до 1 мм. 
+                        Используем отрезные станки для труб диаметром до 300 мм.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Калибровка концов труб и деталей</div>
+                    <div class="stage-text">
+                        Восстановление геометрии торцов труб после резки для обеспечения качественного сварного соединения.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Гнутье труб</div>
+                    <div class="stage-text">
+                        Холодное и горячее гнутье труб на трубогибочных станках. Радиус гиба — от 3D до 5D. 
+                        Для тонкостенных труб и труб из нержавеющей стали.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Снятие фасок</div>
+                    <div class="stage-text">
+                        Механическая обработка торцов труб для подготовки под сварку. Снятие фаски под углом 30-37°.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Сверление труб для врезки патрубков и штуцеров</div>
+                    <div class="stage-text">
+                        Сверление отверстий в трубах для врезки патрубков, штуцеров, гильз под термометры и манометры.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Нарезка резьбы</div>
+                    <div class="stage-text">
+                        Нарезка трубной резьбы на станках и электротруборезах. Диаметр от 15 до 150 мм.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 4: Сварочный участок -->
+        <div id="svarka" class="operation-section">
+            <div class="operation-container">
+                <h2>Сварочный участок</h2>
+                
+                <div class="stage-card">
+                    <div class="stage-title">Стенд для сборки элементов</div>
+                    <div class="stage-text">
+                        Профессиональные сборочные стены для центровки труб под сварку, фиксации углов и размеров.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Сварочный пост</div>
+                    <div class="stage-text">
+                        Оснащенные посты для ручной дуговой сварки (MMA), аргонодуговой сварки неплавящимся электродом (TIG) 
+                        и полуавтоматической сварки в среде углекислого газа (MIG/MAG). Аттестованные сварщики НКС.
+                    </div>
+                </div>
+
+                <div class="operations-grid">
+                    <div class="operation-item"><span class="operation-icon">🔥</span><span>TIG (аргонодуговая)</span></div>
+                    <div class="operation-item"><span class="operation-icon">⚡</span><span>MMA (ручная дуговая)</span></div>
+                    <div class="operation-item"><span class="operation-icon">💨</span><span>MIG/MAG (полуавтомат)</span></div>
+                    <div class="operation-item"><span class="operation-icon">🔍</span><span>Контроль сварных швов</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 5: Антикоррозионная обработка -->
+        <div id="antikorrozionnaya" class="operation-section">
+            <div class="operation-container">
+                <h2>Антикоррозионная обработка труб</h2>
+                
+                <div class="stage-card">
+                    <div class="stage-title">Очистка поверхности</div>
+                    <div class="stage-text">
+                        Механическая и пескоструйная очистка поверхности труб от окалины, ржавчины и загрязнений 
+                        до степени чистоты Sa 2.5 по ГОСТ 9.402.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Нанесение антикоррозионного покрытия</div>
+                    <div class="stage-text">
+                        Грунтовка и окраска труб полимерными и эпоксидными составами. Двухслойное покрытие для эксплуатации в агрессивных средах.
+                    </div>
+                </div>
+
+                <div class="operations-grid">
+                    <div class="operation-item"><span class="operation-icon">🧼</span><span>Обезжиривание</span></div>
+                    <div class="operation-item"><span class="operation-icon">🎨</span><span>Грунтовка</span></div>
+                    <div class="operation-item"><span class="operation-icon">🖌️</span><span>Окраска</span></div>
+                    <div class="operation-item"><span class="operation-icon">🔬</span><span>Контроль толщины покрытия</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 6: Испытания и контроль -->
+        <div id="ispytaniya" class="operation-section">
+            <div class="operation-container">
+                <h2>Испытания деталей и узлов трубопроводов</h2>
+                
+                <div class="stage-card">
+                    <div class="stage-title">Приемка и ревизия арматуры</div>
+                    <div class="stage-text">
+                        Входной контроль арматуры (задвижки, клапаны, вентили) перед монтажом. Проверка герметичности, работоспособности.
+                    </div>
+                </div>
+
+                <div class="stage-card">
+                    <div class="stage-title">Испытание деталей и узлов</div>
+                    <div class="stage-text">
+                        Гидравлические и пневматические испытания изготовленных узлов на заготовительном участке. 
+                        Опрессовка пробным давлением по ГОСТ.
+                    </div>
+                </div>
+
+                <div class="operations-grid">
+                    <div class="operation-item"><span class="operation-icon">💧</span><span>Гидравлические испытания</span></div>
+                    <div class="operation-item"><span class="operation-icon">💨</span><span>Пневматические испытания</span></div>
+                    <div class="operation-item"><span class="operation-icon">📝</span><span>Составление актов</span></div>
+                    <div class="operation-item"><span class="operation-icon">🔧</span><span>Маркировка узлов</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 7: Изготовление полимерных труб -->
+        <div id="polimernye" class="operation-section">
+            <div class="operation-container">
+                <h2>Изготовление полимерных труб</h2>
+                
+                <div class="stage-card">
+                    <div class="stage-text">
+                        Изготовление заготовок и узлов из полипропиленовых (PPR), полиэтиленовых (PE, ПЭ) и ПВХ труб. 
+                        Сварка полимерных труб, сборка узлов с арматурой, испытания.
+                    </div>
+                </div>
+
+                <div class="operations-grid">
+                    <div class="operation-item"><span class="operation-icon">🔗</span><span>Полипропилен (PPR)</span></div>
+                    <div class="operation-item"><span class="operation-icon">🔗</span><span>Полиэтилен (PE, ПЭ)</span></div>
+                    <div class="operation-item"><span class="operation-icon">🔗</span><span>ПВХ трубы</span></div>
+                    <div class="operation-item"><span class="operation-icon">⚡</span><span>Сварка полимеров</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Преимущества заготовительного производства -->
+        <div class="advantages">
+            <div class="advantages-container">
+                <h2>Преимущества заготовительного производства</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">⏱️</div>
+                        <h3>Сокращение сроков монтажа</h3>
+                        <p>До 40% времени экономится за счет готовых узлов</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📐</div>
+                        <h3>Высокая точность</h3>
+                        <p>Изготовление на промышленном оборудовании</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">✅</div>
+                        <h3>Контроль качества</h3>
+                        <p>Испытания узлов до отправки на объект</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🏭</div>
+                        <h3>Собственное производство</h3>
+                        <p>Независимость от субподрядчиков</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма заявки -->
+        <div class="callback">
+            <div class="callback-container">
+                <h2>Нужно изготовление узлов под заказ?</h2>
+                <p>Отправьте чертежи или спецификацию — мы рассчитаем стоимость за 24 часа</p>
+                <form class="callback-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <p>📞 Телефон: <a href="tel:+79158870574" style="color: white; text-decoration: none;">8-915-887-05-74</a></p>
+        <p>📧 Email: info@promingstroy.ru</p>
+        <p>📍 Адрес: г. Москва, ул. Инженерная, д. 10</p>
+        <p>© 2025 ПромИнжСтрой — Заготовительное производство узлов трубопроводов и металлоконструкций</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монтаж вентиляции в Москве | Приточная, вытяжная, промышленная, дымоудаление | ПромИнжСтрой</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Дополнительные стили для страницы вентиляции */
+        .ventilation-hero {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .ventilation-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .ventilation-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Якорная навигация */
+        .anchor-nav {
+            background: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 85px;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-bottom: 1px solid #e8f0fe;
+        }
+
+        .anchor-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .anchor-link {
+            background: #f0f6fe;
+            color: #1a4a7a;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .anchor-link:hover {
+            background: #1a7ab5;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Секции видов вентиляции */
+        .ventilation-section {
+            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .ventilation-section:nth-child(even) {
+            background: #f9fbfe;
+        }
+
+        .ventilation-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .ventilation-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .ventilation-text h2 {
+            color: #0a2b4e;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .ventilation-text h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #1a7ab5;
+        }
+
+        .ventilation-text p {
+            color: #4a6a8a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 1.2rem 0;
+        }
+
+        .ventilation-features {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .ventilation-features li {
+            padding: 0.5rem 0;
+            color: #1a2a3a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ventilation-features li:before {
+            content: "✓";
+            color: #1a7ab5;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a4a7a;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .ventilation-image {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .ventilation-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .ventilation-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Таблица цен */
+        .price-table-section {
+            background: #f0f6fe;
+            padding: 3rem 2rem;
+        }
+
+        .price-table-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .price-table-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .price-table {
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-table th {
+            background: #1a4a7a;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .price-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eef2f7;
+            color: #1a2a3a;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tr:hover {
+            background: #f9fbfe;
+        }
+
+        .price-note {
+            text-align: center;
+            color: #4a6a8a;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Преимущества */
+        .advantages {
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .advantages-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .advantages-container h2 {
+            color: #0a2b4e;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9fbfe;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .advantage-card h3 {
+            color: #0a2b4e;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-card p {
+            color: #4a6a8a;
+            font-size: 0.9rem;
+        }
+
+        /* Форма заявки */
+        .callback {
+            background: linear-gradient(135deg, #0a2b4e 0%, #1a5a8a 100%);
+            padding: 3rem 2rem;
+            color: white;
+        }
+
+        .callback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .callback-container h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .callback-container p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .callback-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .callback-form input {
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            width: 250px;
+            outline: none;
+        }
+
+        .callback-form button {
+            background: #ff8c00;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .callback-form button:hover {
+            background: #e07a00;
+        }
+
+        @media (max-width: 768px) {
+            .ventilation-hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .anchor-nav {
+                top: 130px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .anchor-link {
+                white-space: nowrap;
+            }
+            
+            .ventilation-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .ventilation-text h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .ventilation-text h2 {
+                display: block;
+                text-align: center;
+            }
+            
+            .ventilation-features li {
+                justify-content: center;
+            }
+            
+            .callback-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .callback-form input {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .price-table {
+                font-size: 0.85rem;
+            }
+            
+            .price-table th, .price-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Фиксированная шапка белого цвета -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">ПИС</div>
+                <span>ПромИнжСтрой</span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-btn">Главная</a>
+                
+                <!-- Выпадающий список Услуги -->
+                <div class="dropdown">
+                    <button class="nav-btn">Услуги ▼</button>
+                    <div class="dropdown-content">
+                         <a href="ventilation.html">Монтаж систем вентиляции</a>
+                        <a href="conditioning.html">Монтаж систем кондиционирования и холодоснабжения</a>
+                        <a href="heating.html">Монтаж систем отопления и теплоснабжения</a>
+                        <a href="water-supply.html">Монтаж водоснабжения, водоотведения и канализации</a>
+                        <a href="fire-suppression.html">Монтаж систем пожаротушения</a>
+                        <a href="pipelines.html">Монтаж и сварочные работы технологических трубопроводов</a>
+                        <a href="cable-systems.html">Монтаж кабеленесущих систем</a>
+                        <a href="installation-design.html">Монтажное проектирвоание</a>
+                        <a href="production-section.html">Заготовительное производство</a>
+                    </div>
+                </div>
+                
+                <a href="../index.html#contacts" class="nav-btn">Контакты</a>
+                <a href="../index.html#portfolio" class="nav-btn">Портфолио</a>
+                <a href="tel:+79158870574" class="nav-btn phone-link">📞 8-915-887-05-74</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Герой-блок страницы -->
+        <div class="ventilation-hero">
+            <h1>Монтаж систем вентиляции в Москве</h1>
+            <p>Профессиональный монтаж вентиляции любой сложности для жилых, коммерческих и промышленных объектов</p>
+        </div>
+
+        <!-- Якорная навигация -->
+        <div class="anchor-nav">
+            <div class="anchor-nav-container">
+                <a href="#pritochnaya" class="anchor-link">📥 Приточная вентиляция</a>
+                <a href="#vytyazhnaya" class="anchor-link">📤 Вытяжная вентиляция</a>
+                <a href="#pritochno-vytyazhnaya" class="anchor-link">🔄 Приточно-вытяжная вентиляция</a>
+                <a href="#protivodymnaya" class="anchor-link">🚭 Противодымная вентиляция (дымоудаление)</a>
+                <a href="#mestnaya-vytyazhnaya" class="anchor-link">🏭 Местная вытяжная вентиляция</a>
+                <a href="#promyshlennaya" class="anchor-link">🏭 Промышленная вентиляция</a>
+                <a href="#ceny" class="anchor-link">💰 Цены на монтаж вентиляции</a>
+            </div>
+        </div>
+
+        <!-- Приточная вентиляция -->
+        <div id="pritochnaya" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260618_142931.webp" alt="Монтаж приточной вентиляции">
+                </div>
+                <div class="ventilation-text">
+                    <h2>Монтаж приточной вентиляции</h2>
+                    <p>Приточная вентиляция обеспечивает подачу свежего воздуха в помещение, создавая комфортный микроклимат и снижая концентрацию углекислого газа.</p>
+                    <ul class="ventilation-features">
+                        <li>Подача очищенного и подогретого воздуха</li>
+                        <li>Автоматическое регулирование температуры</li>
+                        <li>Фильтрация воздуха от пыли и аллергенов</li>
+                        <li>Энергоэффективные решения с рекуперацией</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 25 000 ₽ за установку</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Вытяжная вентиляция -->
+        <div id="vytyazhnaya" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Монтаж вытяжной вентиляции</h2>
+                    <p>Вытяжная вентиляция удаляет загрязненный, влажный или отработанный воздух из помещений, предотвращая образование плесени и неприятных запахов.</p>
+                    <ul class="ventilation-features">
+                        <li>Удаление влажного и загрязненного воздуха</li>
+                        <li>Предотвращение образования конденсата и плесени</li>
+                        <li>Установка вентиляторов и воздуховодов</li>
+                        <li>Подходит для кухонь, санузлов, производств</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 18 000 ₽ за установку</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260604_110925.webp" alt="Монтаж вытяжной вентиляции">
+                </div>
+            </div>
+        </div>
+
+        <!-- Приточно-вытяжная вентиляция -->
+        <div id="pritochno-vytyazhnaya" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260604_111650.webp" alt="Монтаж приточно-вытяжной вентиляции">
+                </div>
+                <div class="ventilation-text">
+                    <h2>Монтаж приточно-вытяжной вентиляции</h2>
+                    <p>Сбалансированная система, которая одновременно подает свежий воздух и удаляет отработанный. Оптимальное решение для домов, офисов и производств.</p>
+                    <ul class="ventilation-features">
+                        <li>Полноценный воздухообмен в помещении</li>
+                        <li>Рекуперация тепла — экономия на отоплении до 60%</li>
+                        <li>Автоматическое управление климатом</li>
+                        <li>Фильтрация воздуха высокого класса</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 45 000 ₽ за установку</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Противодымная вентиляция (дымоудаление) -->
+        <div id="protivodymnaya" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Монтаж систем дымоудаления</h2>
+                    <p>Противодымная вентиляция — обязательный элемент безопасности зданий. Обеспечивает эвакуацию людей и дыма при пожаре.</p>
+                    <ul class="ventilation-features">
+                        <li>Соответствие нормам пожарной безопасности</li>
+                        <li>Клапаны дымоудаления и противодымные вентиляторы</li>
+                        <li>Автоматика при пожаре</li>
+                        <li>Для торговых центров, офисов, жилых домов</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 35 000 ₽ за установку</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260618_143759.webp" alt="Монтаж систем дымоудаления">
+                </div>
+            </div>
+        </div>
+
+        <!-- Местная вытяжная вентиляция -->
+        <div id="mestnaya-vytyazhnaya" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260618_143756.webp" alt="Монтаж местной вытяжной вентиляции">
+                </div>
+                <div class="ventilation-text">
+                    <h2>Монтаж местной вытяжной вентиляции</h2>
+                    <p>Локальная система для удаления вредных веществ в местах их образования: зонты над оборудованием, вытяжные шкафы, панели.</p>
+                    <ul class="ventilation-features">
+                        <li>Локальный захват вредных веществ</li>
+                        <li>Зонты и панели над производственным оборудованием</li>
+                        <li>Снижение нагрузки на общую вентиляцию</li>
+                        <li>Для цехов, лабораторий, кухонь</li>
+                    </ul>
+                    <div class="price-badge">Цена: от 22 000 ₽ за установку</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Промышленная вентиляция -->
+        <div id="promyshlennaya" class="ventilation-section">
+            <div class="ventilation-container">
+                <div class="ventilation-text">
+                    <h2>Монтаж промышленной вентиляции</h2>
+                    <p>Мощные системы для заводов, цехов, складов и производственных помещений с высокими требованиями к воздухообмену.</p>
+                    <ul class="ventilation-features">
+                        <li>Высокая производительность до 100 000 м³/ч</li>
+                        <li>Промышленные вентиляторы и воздуховоды</li>
+                        <li>Взрывозащищенное исполнение при необходимости</li>
+                        <li>Аспирационные системы для удаления пыли</li>
+                    </ul>
+                    <div class="price-badge">Цена: рассчитывается индивидуально</div>
+                </div>
+                <div class="ventilation-image">
+                    <img src="../images/IMG_20260618_143801.webp" alt="Монтаж промышленной вентиляции">
+                </div>
+            </div>
+        </div>
+
+        <!-- Таблица цен -->
+        <div id="ceny" class="price-table-section">
+            <div class="price-table-container">
+                <h2>💰 Стоимость монтажа вентиляции</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr><th>Вид работ</th><th>Единица измерения</th><th>Цена, руб.</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Монтаж воздуховодов (прямой участок)</td><td>м²</td><td>от 800</td></tr>
+                        <tr><td>Монтаж гибкого воздуховода</td><td>м.п.</td><td>от 350</td></tr>
+                        <tr><td>Монтаж вентиляционной решетки</td><td>шт.</td><td>от 500</td></tr>
+                        <tr><td>Монтаж вентилятора осевого</td><td>шт.</td><td>от 2 500</td></tr>
+                        <tr><td>Монтаж приточной установки (до 2000 м³/ч)</td><td>шт.</td><td>от 15 000</td></tr>
+                        <tr><td>Монтаж вытяжной установки (до 2000 м³/ч)</td><td>шт.</td><td>от 12 000</td></tr>
+                        <tr><td>Монтаж приточно-вытяжной установки с рекуператором</td><td>шт.</td><td>от 30 000</td></tr>
+                        <tr><td>Монтаж системы дымоудаления</td><td>компл.</td><td>от 25 000</td></tr>
+                        <tr><td>Пусконаладочные работы</td><td>компл.</td><td>от 8 000</td></tr>
+                    </tbody>
+                </table>
+                <div class="price-note">* Цены указаны без учета стоимости оборудования и материалов. Точную стоимость рассчитаем после выезда на объект.</div>
+            </div>
+        </div>
+
+        <!-- Преимущества -->
+        <div class="advantages">
+            <div class="advantages-container">
+                <h2>Почему выбирают нас?</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon">📋</div>
+                        <h3>Проектирование и монтаж</h3>
+                        <p>Полный цикл работ — от проекта до сдачи в эксплуатацию</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🛠️</div>
+                        <h3>Собственное производство</h3>
+                        <p>Изготовление узлов и заготовок на своей базе</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">👷</div>
+                        <h3>Опытные инженеры</h3>
+                        <p>Штатные специалисты с профильным образованием</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-icon">🔧</div>
+                        <h3>Гарантия 3 года</h3>
+                        <p>На все виды монтажных работ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма заявки -->
+        <div class="callback">
+            <div class="callback-container">
+                <h2>Нужна консультация?</h2>
+                <p>Оставьте заявку — мы рассчитаем стоимость монтажа вентиляции за 1 час</p>
+                <form class="callback-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <p>📞 Телефон: <a href="tel:+79158870574" style="color: white; text-decoration: none;">8-915-887-05-74</a></p>
+        <p>📧 Email: info@promingstroy.ru</p>
+        <p>📍 Адрес: г. Москва, ул. Инженерная, д. 10</p>
+        <p>© 2025 ПромИнжСтрой — Комплексный монтаж инженерных систем в Москве</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
